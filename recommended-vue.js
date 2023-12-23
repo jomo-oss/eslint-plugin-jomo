@@ -128,6 +128,14 @@ module.exports = {
         "avoidEscape": true, "allowTemplateLiterals": true
       }
     ],
+    "no-restricted-syntax": [
+      "error",
+
+      {
+        "selector": "SwitchCase > *.consequent[type!='BlockStatement']",
+        "message": "Switch cases without blocks are disallowed."
+      },
+    ],
 
     // Jomo JS rules
     "jomo/enforce-optional": "error",
@@ -278,7 +286,9 @@ module.exports = {
           "CONTENT",
           "EVENTS",
           "DEFINITION",
-          ["GLOBAL", "UNIQUE", "OTHER_ATTR"]
+          "ATTR_DYNAMIC",
+          "ATTR_STATIC",
+          "ATTR_SHORTHAND_BOOL"
         ],
         "alphabetical": false
       }
@@ -313,6 +323,7 @@ module.exports = {
     "jomo/vue-header-check": "error",
     "jomo/vue-html-quotes": "error",
     "jomo/vue-no-regex-data": "error",
+    "jomo/vue-props-declaration-multiline": "error",
     "jomo/vue-props-declaration-order": "error"
   }
 }

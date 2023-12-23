@@ -137,28 +137,28 @@ module.exports = {
       },
     ],
 
-    // Crisp JS rules
-    "crisp/enforce-optional": "error",
-    "crisp/header-check": "error",
-    "crisp/header-comments-check": "error",
-    "crisp/methods-naming": "error",
-    "crisp/methods-ordering": "error",
-    "crisp/multiline-comment-end-backslash": "error",
-    "crisp/no-async": "error",
-    "crisp/no-var-in-blocks": "error",
-    "crisp/no-useless-template-literals": "error",
-    "crisp/regex-in-constructor": "error",
-    "crisp/ternary-parenthesis": "error",
-    "crisp/variable-names": "error",
+    // Jomo JS rules
+    "jomo/enforce-optional": "error",
+    "jomo/header-check": "error",
+    "jomo/header-comments-check": "error",
+    "jomo/methods-naming": "error",
+    "jomo/methods-ordering": "error",
+    "jomo/multiline-comment-end-backslash": "error",
+    "jomo/no-async": "error",
+    "jomo/no-var-in-blocks": "error",
+    "jomo/no-useless-template-literals": "error",
+    "jomo/regex-in-constructor": "error",
+    "jomo/ternary-parenthesis": "error",
+    "jomo/variable-names": "error",
 
-    "crisp/one-space-after-operator": [
+    "jomo/one-space-after-operator": [
       "error",
 
       {
         "checkColon": false
       }
     ],
-    "crisp/no-short-parameters": [
+    "jomo/no-short-parameters": [
       "error",
 
       {
@@ -211,12 +211,12 @@ module.exports = {
       }
     ],
 
-    // Crisp JSDoc rules
-    "crisp/jsdoc-align-params": "error",
-    "crisp/jsdoc-check-indentation": "error",
-    "crisp/jsdoc-check-optional-params": "error",
-    "crisp/jsdoc-enforce-access": "error",
-    "crisp/jsdoc-enforce-classdesc": "error",
+    // Jomo JSDoc rules
+    "jomo/jsdoc-align-params": "error",
+    "jomo/jsdoc-check-indentation": "error",
+    "jomo/jsdoc-check-optional-params": "error",
+    "jomo/jsdoc-enforce-access": "error",
+    "jomo/jsdoc-enforce-classdesc": "error",
 
     // General Vue rules
     "vue/component-api-style": ["error", ["options"]],
@@ -317,13 +317,13 @@ module.exports = {
       }
     ],
 
-    // Crisp Vue rules
-    "crisp/vue-computed-order": "error",
-    "crisp/vue-emits-order": "error",
-    "crisp/vue-header-check": "error",
-    "crisp/vue-html-quotes": "error",
-    "crisp/vue-no-regex-data": "error",
-    "crisp/vue-props-declaration-multiline": "error",
-    "crisp/vue-props-declaration-order": "error"
+    // Jomo Vue rules
+    "jomo/vue-computed-order": "error",
+    "jomo/vue-emits-order": "error",
+    "jomo/vue-header-check": "error",
+    "jomo/vue-html-quotes": "error",
+    "jomo/vue-no-regex-data": "error",
+    "jomo/vue-props-declaration-multiline": "error",
+    "jomo/vue-props-declaration-order": "error"
   }
 }

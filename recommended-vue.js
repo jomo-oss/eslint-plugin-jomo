@@ -33,6 +33,14 @@ module.exports = {
   rules: {
     // General JS rules
     "arrow-parens": ["error", "always"],
+    "brace-style": [
+      "error",
+      "1tbs",
+
+      {
+        "allowSingleLine": true
+      }
+    ],
     "comma-dangle": ["error", "never"],
     "comma-style": ["error", "last"],
     "curly": "error",
@@ -43,37 +51,6 @@ module.exports = {
     "eqeqeq": "error",
     "eol-last": "error",
     "for-direction": "error",
-    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-    "linebreak-style": ["error", "unix"],
-    "newline-per-chained-call": "error",
-    "no-console": "warn",
-    "no-debugger": "warn",
-    "no-eval": "error",
-    "no-multi-str": "error",
-    "no-multiple-empty-lines": ["error", { max: 1 }],
-    "no-mixed-spaces-and-tabs": "error",
-    "no-tabs": "error",
-    "no-trailing-spaces": "error",
-    "no-unused-vars": "warn",
-    "no-unsafe-optional-chaining": "error",
-    "object-curly-spacing": ["error", "always"],
-    "padded-blocks": ["error", "never"],
-    "prefer-arrow-callback": "error",
-    "quote-props": ["error", "as-needed"],
-    "semi": ["error", "always"],
-    "semi-style": ["error", "last"],
-    "semi-spacing": ["error", { "before": false, "after": true }],
-    "space-before-blocks": "error",
-    "space-in-parens": ["error", "never"],
-
-    "brace-style": [
-      "error",
-      "1tbs",
-
-      {
-        "allowSingleLine": true
-      }
-    ],
     "indent": [
       "error",
       2,
@@ -98,6 +75,29 @@ module.exports = {
         "offsetTernaryExpressions": true
       }
     ],
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": "error",
+    "linebreak-style": ["error", "unix"],
+    "newline-per-chained-call": "error",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-eval": "error",
+    "no-multi-str": "error",
+    "no-multiple-empty-lines": ["error", { max: 1 }],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-restricted-syntax": [
+      "error",
+
+      {
+        "selector": "SwitchCase > *.consequent[type!='BlockStatement']",
+        "message": "Switch cases without braces are disallowed."
+      }
+    ],
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-vars": "warn",
+    "no-unsafe-optional-chaining": "error",
     "object-curly-newline": [
       "error",
 
@@ -105,6 +105,8 @@ module.exports = {
         "multiline": true, "consistent": true
       }
     ],
+    "object-curly-spacing": ["error", "always"],
+    "padded-blocks": ["error", "never"],
     "padding-line-between-statements": [
       "error",
 
@@ -120,6 +122,7 @@ module.exports = {
       { "blankLine": "always", "prev": "continue", "next": "*" },
       { "blankLine": "always", "prev": "break", "next": "*" }
     ],
+    "prefer-arrow-callback": "error",
     "quotes": [
       "error",
       "double",
@@ -128,36 +131,24 @@ module.exports = {
         "avoidEscape": true, "allowTemplateLiterals": true
       }
     ],
-    "no-restricted-syntax": [
-      "error",
-
-      {
-        "selector": "SwitchCase > *.consequent[type!='BlockStatement']",
-        "message": "Switch cases without blocks are disallowed."
-      },
-    ],
+    "quote-props": ["error", "as-needed"],
+    "semi": ["error", "always"],
+    "semi-style": ["error", "last"],
+    "semi-spacing": ["error", { "before": false, "after": true }],
+    "space-before-blocks": "error",
+    "space-in-parens": ["error", "never"],
 
     // Jomo JS rules
     "jomo/enforce-optional": "error",
     "jomo/header-check": "error",
     "jomo/header-comments-check": "error",
+    "jomo/import-group-comment": "error",
+    "jomo/import-group-order": "error",
     "jomo/methods-naming": "error",
     "jomo/methods-ordering": "error",
     "jomo/multiline-comment-end-backslash": "error",
+    "jomo/newline-after-switch-case": "error",
     "jomo/no-async": "error",
-    "jomo/no-var-in-blocks": "error",
-    "jomo/no-useless-template-literals": "error",
-    "jomo/regex-in-constructor": "error",
-    "jomo/ternary-parenthesis": "error",
-    "jomo/variable-names": "error",
-
-    "jomo/one-space-after-operator": [
-      "error",
-
-      {
-        "checkColon": false
-      }
-    ],
     "jomo/no-short-parameters": [
       "error",
 
@@ -165,11 +156,22 @@ module.exports = {
         "exceptions": ["_", "$", "x", "y"]
       }
     ],
+    "jomo/no-useless-template-literals": "error",
+    "jomo/no-var-in-blocks": "error",
+    "jomo/one-space-after-operator": [
+      "error",
 
-    // JSDoc rules
-    "jsdoc/require-param-description": "off",
-    "jsdoc/newline-after-description": "off",
+      {
+        "checkColon": false
+      }
+    ],
+    "jomo/regex-in-constructor": "error",
+    "jomo/ternary-parenthesis": "error",
+    "jomo/variable-names": "error",
+
+    // General JSDoc rules
     "jsdoc/require-description": "error",
+    "jsdoc/require-param-description": "off",
     "jsdoc/require-jsdoc": [
       "error",
 
@@ -219,34 +221,25 @@ module.exports = {
     "jomo/jsdoc-enforce-classdesc": "error",
 
     // General Vue rules
-    "vue/component-api-style": ["error", ["options"]],
-    "vue/component-name-in-template-casing": ["error", "kebab-case"],
-    "vue/component-options-name-casing": ["error", "PascalCase"],
-    "vue/custom-event-name-casing": ["error", "camelCase"],
-    "vue/html-comment-content-spacing": ["error", "always"],
-    "vue/match-component-import-name": "error",
-    "vue/new-line-between-multi-line-property": "error",
-    "vue/no-bare-strings-in-template": "error",
-    "vue/no-multiple-objects-in-class": "error",
-    "vue/no-static-inline-styles": "error",
-    "vue/no-use-v-else-with-v-for": "error",
-    "vue/no-useless-v-bind": "error",
-    "vue/padding-line-between-blocks": ["error", "always"],
-    "vue/require-direct-export": "error",
-    "vue/v-for-delimiter-style": ["error", "in"],
-    "vue/comma-dangle": "error",
-    "vue/html-quotes": "off",
-    "vue/no-v-html": "off",
-    "vue/prefer-true-attribute-shorthand": "error",
-    "vue/comma-dangle": "error",
-    "vue/eqeqeq": "error",
-    "vue/key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-    "vue/no-irregular-whitespace": "error",
-    "vue/padding-lines-in-component-definition": [
+    "vue/attributes-order": [
       "error",
 
       {
-        "groupSingleLineProperties": false
+        "order": [
+          "RENDER_MODIFIERS",
+          "CONDITIONALS",
+          "OTHER_DIRECTIVES",
+          "LIST_RENDERING",
+          "SLOT",
+          "TWO_WAY_BINDING",
+          "CONTENT",
+          "EVENTS",
+          "DEFINITION",
+          "ATTR_DYNAMIC",
+          "ATTR_STATIC",
+          "ATTR_SHORTHAND_BOOL"
+        ],
+        "alphabetical": false
       }
     ],
     "vue/block-lang": [
@@ -272,34 +265,39 @@ module.exports = {
         "maxEmptyLines": 0
       }
     ],
-    "vue/attributes-order": [
+    "vue/comma-dangle": "error",
+    "vue/component-api-style": ["error", ["options"]],
+    "vue/component-name-in-template-casing": ["error", "kebab-case"],
+    "vue/component-options-name-casing": ["error", "PascalCase"],
+    "vue/custom-event-name-casing": ["error", "camelCase"],
+    "vue/eqeqeq": "error",
+    "vue/html-comment-content-spacing": ["error", "always"],
+    "vue/html-quotes": "off",
+    "vue/key-spacing": [
       "error",
 
       {
-        "order": [
-          "RENDER_MODIFIERS",
-          "CONDITIONALS",
-          "OTHER_DIRECTIVES",
-          "LIST_RENDERING",
-          "SLOT",
-          "TWO_WAY_BINDING",
-          "CONTENT",
-          "EVENTS",
-          "DEFINITION",
-          "ATTR_DYNAMIC",
-          "ATTR_STATIC",
-          "ATTR_SHORTHAND_BOOL"
-        ],
-        "alphabetical": false
+        "beforeColon": false,
+        "afterColon": true
       }
     ],
-    "vue/component-tags-order": [
+    "vue/match-component-import-name": "error",
+    "vue/max-len": [
       "error",
 
       {
-        "order": [ "template", "script", "style" ]
+        "code": 80,
+        "template": 999,
+        "ignorePattern": "^import|\`(.+?)\`|\/\\*\\* \@type|\@return \\{|\\*{20,}",
+        "ignoreStrings": true,
+        "ignoreUrls": true,
+        "ignoreRegExpLiterals": true
       }
     ],
+    "vue/new-line-between-multi-line-property": "error",
+    "vue/no-bare-strings-in-template": "error",
+    "vue/no-irregular-whitespace": "error",
+    "vue/no-multiple-objects-in-class": "error",
     "vue/no-mutating-props": [
       "error",
 
@@ -307,6 +305,21 @@ module.exports = {
         "shallowOnly": true
       }
     ],
+    "vue/no-static-inline-styles": "error",
+    "vue/no-use-v-else-with-v-for": "error",
+    "vue/no-useless-v-bind": "error",
+    "vue/no-v-html": "off",
+    "vue/padding-line-between-blocks": ["error", "always"],
+    "vue/padding-lines-in-component-definition": [
+      "error",
+
+      {
+        "groupSingleLineProperties": false
+      }
+    ],
+    "vue/prefer-true-attribute-shorthand": "error",
+    "vue/require-direct-export": "error",
+    "vue/v-for-delimiter-style": ["error", "in"],
     "vue/v-slot-style": [
       "error",
 

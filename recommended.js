@@ -29,6 +29,14 @@ module.exports = {
   rules: {
     // General JS rules
     "arrow-parens": ["error", "always"],
+    "brace-style": [
+      "error",
+      "1tbs",
+
+      {
+        "allowSingleLine": true
+      }
+    ],
     "comma-dangle": ["error", "never"],
     "comma-style": ["error", "last"],
     "curly": "error",
@@ -38,33 +46,6 @@ module.exports = {
     "eqeqeq": "error",
     "eol-last": "error",
     "for-direction": "error",
-    "linebreak-style": ["error", "unix"],
-    "max-len": ["error", 80],
-    "no-console": "warn",
-    "no-debugger": "warn",
-    "no-eval": "error",
-    "no-multi-str": "error",
-    "no-mixed-spaces-and-tabs": "error",
-    "no-tabs": "error",
-    "no-trailing-spaces": "error",
-    "no-unused-vars": "warn",
-    "no-unsafe-optional-chaining": "error",
-    "object-curly-spacing": ["error", "always"],
-    "padded-blocks": ["error", "never"],
-    "quote-props": ["error", "as-needed"],
-    "semi": ["error", "always"],
-    "semi-style": ["error", "last"],
-    "space-before-blocks": "error",
-    "space-in-parens": ["error", "never"],
-
-    "brace-style": [
-      "error",
-      "1tbs",
-
-      {
-        "allowSingleLine": true
-      }
-    ],
     "indent": [
       "error",
       2,
@@ -96,6 +77,12 @@ module.exports = {
         ]
       }
     ],
+    "keyword-spacing": "error",
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["error", 80],
+    "no-console": "warn",
+    "no-debugger": "warn",
+    "no-eval": "error",
     "no-magic-numbers": [
       "error",
 
@@ -105,6 +92,13 @@ module.exports = {
         "ignoreDefaultValues": true
       }
     ],
+    "no-multi-str": "error",
+    "no-mixed-spaces-and-tabs": "error",
+    "no-tabs": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+    "no-unused-vars": "warn",
+    "no-unsafe-optional-chaining": "error",
     "object-curly-newline": [
       "error",
 
@@ -112,6 +106,8 @@ module.exports = {
         "multiline": true, "consistent": true
       }
     ],
+    "object-curly-spacing": ["error", "always"],
+    "padded-blocks": ["error", "never"],
     "padding-line-between-statements": [
       "error",
 
@@ -135,6 +131,11 @@ module.exports = {
         "avoidEscape": true, "allowTemplateLiterals": true
       }
     ],
+    "quote-props": ["error", "as-needed"],
+    "semi": ["error", "always"],
+    "semi-style": ["error", "last"],
+    "space-before-blocks": "error",
+    "space-in-parens": ["error", "never"],
 
     // Jomo JS rules
     "jomo/align-consecutive-class-assignements": "error",
@@ -148,15 +149,9 @@ module.exports = {
     "jomo/methods-naming": "error",
     "jomo/methods-ordering": "error",
     "jomo/multiline-comment-end-backslash": "error",
+    "jomo/newline-after-switch-case": "error",
     "jomo/no-async": "error",
     "jomo/no-var-in-blocks": "error",
-    "jomo/no-space-in-optional-arguments": "error",
-    "jomo/one-space-after-operator": "error",
-    "jomo/regex-in-constructor": "error",
-    "jomo/ternary-parenthesis": "error",
-    "jomo/two-lines-between-class-members": "error",
-    "jomo/variable-names": "error",
-
     "jomo/no-short-parameters": [
       "error",
 
@@ -164,11 +159,15 @@ module.exports = {
         "exceptions": ["_", "$"]
       }
     ],
+    "jomo/no-space-in-optional-arguments": "error",
+    "jomo/one-space-after-operator": "error",
+    "jomo/regex-in-constructor": "error",
+    "jomo/ternary-parenthesis": "error",
+    "jomo/two-lines-between-class-members": "error",
+    "jomo/variable-names": "error",
 
-    // JSDoc rules
-    "jsdoc/no-undefined-types"       : "off",
-    "jsdoc/require-param-description": "off",
-    "jsdoc/newline-after-description": "off",
+    // General JSDoc rules
+    "jsdoc/no-undefined-types": "off",
     "jsdoc/require-jsdoc": [
       "error",
 
@@ -182,6 +181,7 @@ module.exports = {
         }
       }
     ],
+    "jsdoc/require-param-description": "off",
     "jsdoc/sort-tags": [
       "error",
 

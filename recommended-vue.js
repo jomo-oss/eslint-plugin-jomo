@@ -140,38 +140,38 @@ module.exports = {
     "space-in-parens": ["error", "never"],
     "space-infix-ops": "error",
 
-    // Crisp JS rules
-    "crisp/align-comments": "error",
-    "crisp/enforce-optional": "error",
-    "crisp/header-check": "error",
-    "crisp/header-comments-check": "error",
-    "crisp/import-group-comment": "error",
-    "crisp/import-group-order": "error",
-    "crisp/methods-naming": "error",
-    "crisp/methods-ordering": "error",
-    "crisp/multiline-comment-end-backslash": "error",
-    "crisp/newline-after-switch-case": "error",
-    "crisp/no-async": "error",
-    "crisp/no-extra-line-within-function": "error",
-    "crisp/no-short-parameters": [
+    // Jomo JS rules
+    "jomo/align-comments": "error",
+    "jomo/enforce-optional": "error",
+    "jomo/header-check": "error",
+    "jomo/header-comments-check": "error",
+    "jomo/import-group-comment": "error",
+    "jomo/import-group-order": "error",
+    "jomo/methods-naming": "error",
+    "jomo/methods-ordering": "error",
+    "jomo/multiline-comment-end-backslash": "error",
+    "jomo/newline-after-switch-case": "error",
+    "jomo/no-async": "error",
+    "jomo/no-extra-line-within-function": "error",
+    "jomo/no-short-parameters": [
       "error",
 
       {
         "exceptions": ["_", "$", "x", "y"]
       }
     ],
-    "crisp/no-useless-template-literals": "error",
-    "crisp/no-var-in-blocks": "error",
-    "crisp/one-space-after-operator": [
+    "jomo/no-useless-template-literals": "error",
+    "jomo/no-var-in-blocks": "error",
+    "jomo/one-space-after-operator": [
       "error",
 
       {
         "checkColon": false
       }
     ],
-    "crisp/regex-in-constructor": "error",
-    "crisp/ternary-parenthesis": "error",
-    "crisp/variable-names": "error",
+    "jomo/regex-in-constructor": "error",
+    "jomo/ternary-parenthesis": "error",
+    "jomo/variable-names": "error",
 
     // General JSDoc rules
     "jsdoc/require-description": "error",
@@ -217,13 +217,13 @@ module.exports = {
       }
     ],
 
-    // Crisp JSDoc rules
-    "crisp/jsdoc-align-params": "error",
-    "crisp/jsdoc-check-indentation": "error",
-    "crisp/jsdoc-check-optional-params": "error",
-    "crisp/jsdoc-enforce-access": "error",
-    "crisp/jsdoc-enforce-classdesc": "error",
-    "crisp/jsdoc-require-description-uppercase": "error",
+    // Jomo JSDoc rules
+    "jomo/jsdoc-align-params": "error",
+    "jomo/jsdoc-check-indentation": "error",
+    "jomo/jsdoc-check-optional-params": "error",
+    "jomo/jsdoc-enforce-access": "error",
+    "jomo/jsdoc-enforce-classdesc": "error",
+    "jomo/jsdoc-require-description-uppercase": "error",
 
     // General Vue rules
     "vue/attributes-order": [
@@ -344,18 +344,18 @@ module.exports = {
       }
     ],
 
-    // Crisp Vue rules
-    "crisp/vue-attribute-comma": "error",
-    "crisp/vue-attribute-linebreak": "error",
-    "crisp/vue-computed-order": "error",
-    "crisp/vue-emits-order": "error",
-    "crisp/vue-header-check": "error",
-    "crisp/vue-html-indent": "error",
-    "crisp/vue-html-quotes": "error",
-    "crisp/vue-no-regex-data": "error",
-    "crisp/vue-props-declaration-line-break": "error",
-    "crisp/vue-props-declaration-multiline": "error",
-    "crisp/vue-props-declaration-order": "error",
-    "crisp/vue-ref-case": "error"
+    // Jomo Vue rules
+    "jomo/vue-attribute-comma": "error",
+    "jomo/vue-attribute-linebreak": "error",
+    "jomo/vue-computed-order": "error",
+    "jomo/vue-emits-order": "error",
+    "jomo/vue-header-check": "error",
+    "jomo/vue-html-indent": "error",
+    "jomo/vue-html-quotes": "error",
+    "jomo/vue-no-regex-data": "error",
+    "jomo/vue-props-declaration-line-break": "error",
+    "jomo/vue-props-declaration-multiline": "error",
+    "jomo/vue-props-declaration-order": "error",
+    "jomo/vue-ref-case": "error"
   }
 }

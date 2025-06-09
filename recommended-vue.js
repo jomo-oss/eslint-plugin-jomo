@@ -42,6 +42,7 @@ module.exports = {
       }
     ],
     "comma-dangle": ["error", "never"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
     "comma-style": ["error", "last"],
     "curly": "error",
     "computed-property-spacing": ["error", "never"],
@@ -137,8 +138,10 @@ module.exports = {
     "semi-spacing": ["error", { "before": false, "after": true }],
     "space-before-blocks": "error",
     "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
 
     // Jomo JS rules
+    "jomo/align-comments": "error",
     "jomo/enforce-optional": "error",
     "jomo/header-check": "error",
     "jomo/header-comments-check": "error",
@@ -149,6 +152,7 @@ module.exports = {
     "jomo/multiline-comment-end-backslash": "error",
     "jomo/newline-after-switch-case": "error",
     "jomo/no-async": "error",
+    "jomo/no-extra-line-within-function": "error",
     "jomo/no-short-parameters": [
       "error",
 
@@ -219,6 +223,7 @@ module.exports = {
     "jomo/jsdoc-check-optional-params": "error",
     "jomo/jsdoc-enforce-access": "error",
     "jomo/jsdoc-enforce-classdesc": "error",
+    "jomo/jsdoc-require-description-uppercase": "error",
 
     // General Vue rules
     "vue/attributes-order": [
@@ -269,7 +274,16 @@ module.exports = {
     "vue/component-api-style": ["error", ["options"]],
     "vue/component-name-in-template-casing": ["error", "kebab-case"],
     "vue/component-options-name-casing": ["error", "PascalCase"],
-    "vue/custom-event-name-casing": ["error", "camelCase"],
+    "vue/custom-event-name-casing": [
+      "error",
+      "camelCase",
+
+      {
+        "ignores": [
+          "/^[a-z]+(?:-[a-z]+)*(?::[a-z]+(?:-[a-z]+)*)*$/i"
+        ]
+      }
+    ],
     "vue/eqeqeq": "error",
     "vue/html-comment-content-spacing": ["error", "always"],
     "vue/html-quotes": "off",
@@ -331,12 +345,17 @@ module.exports = {
     ],
 
     // Jomo Vue rules
+    "jomo/vue-attribute-comma": "error",
+    "jomo/vue-attribute-linebreak": "error",
     "jomo/vue-computed-order": "error",
     "jomo/vue-emits-order": "error",
     "jomo/vue-header-check": "error",
+    "jomo/vue-html-indent": "error",
     "jomo/vue-html-quotes": "error",
     "jomo/vue-no-regex-data": "error",
+    "jomo/vue-props-declaration-line-break": "error",
     "jomo/vue-props-declaration-multiline": "error",
-    "jomo/vue-props-declaration-order": "error"
+    "jomo/vue-props-declaration-order": "error",
+    "jomo/vue-ref-case": "error"
   }
 }

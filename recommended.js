@@ -138,6 +138,7 @@ module.exports = {
     "space-in-parens": ["error", "never"],
 
     // Jomo JS rules
+    "jomo/align-comments": "error",
     "jomo/align-consecutive-class-assignements": "error",
     "jomo/align-one-var": "error",
     "jomo/align-requires": "error",
@@ -151,6 +152,7 @@ module.exports = {
     "jomo/multiline-comment-end-backslash": "error",
     "jomo/newline-after-switch-case": "error",
     "jomo/no-async": "error",
+    "jomo/no-extra-line-within-function": "error",
     "jomo/no-var-in-blocks": "error",
     "jomo/no-short-parameters": [
       "error",
@@ -194,11 +196,13 @@ module.exports = {
               "public",
 
               "class",
-
               "classdesc",
 
+              "generator",
+
               "param",
-              "return"
+              "return",
+              "yields"
             ]
           }
         ]
@@ -208,6 +212,7 @@ module.exports = {
     // Jomo JSDoc rules
     "jomo/jsdoc-align-params": "error",
     "jomo/jsdoc-check-indentation": "error",
-    "jomo/jsdoc-enforce-classdesc": "error"
+    "jomo/jsdoc-enforce-classdesc": "error",
+    "jomo/jsdoc-require-description-uppercase": "error"
   }
 }

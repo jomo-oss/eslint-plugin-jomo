@@ -1,0 +1,32 @@
+{
+  "name": "eslint-plugin-jomo",
+  "version": "1.0.0",
+  "description": "Custom ESLint Rules for Jomo",
+  "author": "Jomo SAS",
+  "main": "index.js",
+  "type": "module",
+  "homepage": "https://github.com/jomo-oss/eslint-plugin-jomo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jomo-oss/eslint-plugin-jomo"
+  },
+  "bugs": {
+    "url": "https://github.com/jomo-oss/eslint-plugin-jomo/issues"
+  },
+  "dependencies": {
+    "doctrine": "3.0.0",
+    "eslint-plugin-jsdoc": "50.8.0"
+  },
+  "peerDependencies": {
+    "eslint": "9.29.0",
+    "eslint-plugin-vue": "10.2.0",
+    "eslint-plugin-vue-pug": "1.0.0-alpha.3",
+    "globals": "15.15.0"
+  },
+  "keywords": [
+    "eslint",
+    "rules",
+    "vue"
+  ],
+  "license": "MIT"
+}

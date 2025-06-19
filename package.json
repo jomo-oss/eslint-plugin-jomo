@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jomo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Custom ESLint Rules for Jomo",
   "author": "Jomo SAS",
   "main": "index.js",
@@ -16,7 +16,7 @@
   "dependencies": {
     "doctrine": "3.0.0",
     "eslint": "9.29.0",
-    "eslint-plugin-crisp": "1.1.8",
+    "eslint-plugin-crisp": "1.1.9",
     "eslint-plugin-jsdoc": "50.8.0",
     "globals": "15.15.0"
   },

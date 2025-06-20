@@ -4,7 +4,7 @@ let _configJSDoc = crisp.configs.recommended[0];
 let _configCrisp = crisp.configs.recommended[1];
 
 // Rename 'crisp/' rules to 'jomo/'
-Object.keys(_configCrisp.rules).forEach(key => {
+Object.keys(_configCrisp.rules).forEach((key) => {
   if (key.startsWith("crisp/")) {
     let _key = key.replace("crisp/", "jomo/");
 

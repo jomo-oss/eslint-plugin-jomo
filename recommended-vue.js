@@ -19,7 +19,10 @@ Object.keys(_configCrisp.rules).forEach((key) => {
 
 export default function configRecommendedVue(pluginJomo) {
   return [
+    _configJS,
     _configJSDoc,
+    _configVue,
+    _configVuePug,
     _configCrisp,
 
     {

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jomo",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Custom ESLint Rules for Jomo",
   "author": "Jomo SAS",
   "main": "index.js",
@@ -15,14 +15,14 @@
   },
   "dependencies": {
     "doctrine": "3.0.0",
-    "eslint": "9.29.0",
-    "eslint-plugin-crisp": "1.2.12",
+    "eslint": "9.39.1",
+    "eslint-plugin-crisp": "1.3.3",
     "eslint-plugin-jsdoc": "50.8.0",
     "globals": "15.15.0"
   },
   "peerDependencies": {
-    "eslint-plugin-vue": "10.2.0",
-    "eslint-plugin-vue-pug": "1.0.0-alpha.3"
+    "eslint-plugin-vue": "10.8.0",
+    "eslint-plugin-vue-pug": "1.0.0-alpha.5"
   },
   "keywords": [
     "eslint",

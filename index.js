@@ -1,7 +1,7 @@
 import configRecommended from "./recommended.js";
 import configRecommendedVue from "./recommended-vue.js";
 
-import projectPackage from "./package.json" assert { type: "json" };
+import projectPackage from "./package.json" with { type: "json" };
 
 const plugin = {
   meta: {

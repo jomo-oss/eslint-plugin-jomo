@@ -33,6 +33,7 @@ export default function configRecommendedVue(pluginJomo) {
       },
 
       rules: {
+        // Jomo JS rules
         "jomo/header-check": ["error", {
           "patterns": [
             "\n \\* This file is part of .+\\n \\*\\n \\* Copyright \\(c\\) \\d{4} Jomo SAS\\n \\* All rights belong to Jomo SAS\\n ",

@@ -16,7 +16,7 @@
   "dependencies": {
     "doctrine": "3.0.0",
     "eslint": "9.39.1",
-    "eslint-plugin-crisp": "1.4.7",
+    "eslint-plugin-crisp": "1.5.0",
     "eslint-plugin-jsdoc": "50.8.0",
     "globals": "15.15.0"
   },

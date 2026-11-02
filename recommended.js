@@ -21,8 +21,7 @@ export default function configRecommended(pluginJomo) {
 
     {
       plugins: {
-        // Define 'crisp' plugin as 'jomo', so we can reference rules with \
-        //   'jomo/'
+        // Define 'crisp' plugin as 'jomo', so we can reference rules with 'jomo/'
         jomo: crisp
       },
 

@@ -1,23 +1,23 @@
 import crisp from "eslint-plugin-crisp";
 
-let _configJSDoc = crisp.configs.recommended[0];
-let _configCrisp = crisp.configs.recommended[1];
-
-// Rename 'crisp/' rules to 'jomo/'
-Object.keys(_configCrisp.rules).forEach((key) => {
-  if (key.startsWith("crisp/")) {
-    let _key = key.replace("crisp/", "jomo/");
-
-    _configCrisp.rules[_key] = _configCrisp.rules[key];
-
-    delete _configCrisp.rules[key];
+// Preserve every config entry and rename 'crisp/' rules
+let _configs = crisp.configs.recommended.map((config) => {
+  if (!config.rules) {
+    return config;
   }
+
+  return {
+    ...config,
+
+    rules: Object.fromEntries(Object.entries(config.rules).map(([key, value]) => {
+      return [key.replace(/^crisp\//, "jomo/"), value];
+    }))
+  };
 });
 
 export default function configRecommended(pluginJomo) {
   return [
-    _configJSDoc,
-    _configCrisp,
+    ..._configs,
 
     {
       plugins: {
